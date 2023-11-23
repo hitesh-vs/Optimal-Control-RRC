@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 
   using namespace std::chrono_literals;
 
-  commands.data.push_back(0);
+  commands.data.push_back(10);
   publisher->publish(commands);
   std::this_thread::sleep_for(1s);
 
@@ -53,6 +53,6 @@ int main(int argc, char * argv[])
   publisher->publish(commands);
   std::this_thread::sleep_for(1s);
   rclcpp::shutdown();
-
+ 
   return 0;
 }

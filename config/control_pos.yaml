@@ -12,9 +12,11 @@ joint_trajectory_controller:
   ros__parameters:
     joints:
       - slider
-    interface_name: position
+    interface_name: position, velocity, acceleration
     command_interfaces:
+      - acceleration
       - position
+      - velocity
     state_interfaces:
       - position
       - velocity

@@ -54,6 +54,12 @@ ament_target_dependencies(trajectory
   std_msgs
 )
 
+add_executable(test_2d examples/test_2d.cpp)
+ament_target_dependencies(test_2d
+  rclcpp
+  std_msgs
+)
+
 add_executable(traj_pos examples/traj_pos.cpp)
 ament_target_dependencies(traj_pos
   rclcpp
@@ -97,6 +103,7 @@ install(
     example_gripper
     trajectory
     traj_pos
+    test_2d
   DESTINATION
     lib/${PROJECT_NAME}
 )

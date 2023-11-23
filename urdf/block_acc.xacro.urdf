@@ -26,7 +26,7 @@
   <link name="cuboid">
     <visual>
       <geometry>
-        <box size="0.5 0.5 0.2"/>
+        <box size="1 1 0.1"/>
       </geometry>
       <origin xyz="0 0 0"/>
       <material name="green">
@@ -35,7 +35,7 @@
     </visual>
     <collision>
       <geometry>
-        <box size="0.5 0.5 0.2"/>
+        <box size="1 1 0.1"/>
       </geometry>
       <origin xyz="0 0 0"/>
     </collision>
@@ -83,7 +83,7 @@
 
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-      <parameters>$(find gazebo_ros2_control_demos)/config/control_pos.yaml</parameters>
+      <parameters>$(find gazebo_ros2_control_demos)/config/traj_effort.yaml</parameters>
     </plugin>
   </gazebo>
 </robot>

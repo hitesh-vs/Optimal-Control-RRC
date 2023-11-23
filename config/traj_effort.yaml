@@ -2,20 +2,19 @@ controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
 
-    effort_controller:
-      type: effort_controllers/JointGroupEffortController
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-effort_controller:
+joint_trajectory_controller:
   ros__parameters:
     joints:
       - slider
-      - slider_y
+    interface_name: acceleration
     command_interfaces:
-      - effort
+      - acceleration
     state_interfaces:
       - position
       - velocity
-      - effort
-    pid: {p: 1300.0, i: 0.0, d: 5, i_clamp_min: -130.0, i_clamp_max: 130, antiwindup: True}
